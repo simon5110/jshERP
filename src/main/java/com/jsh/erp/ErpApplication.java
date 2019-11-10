@@ -20,5 +20,6 @@ import javax.servlet.http.Cookie;
 public class ErpApplication{
     public static void main(String[] args) {
         SpringApplication.run(ErpApplication.class, args);
+        System.out.println("程序正在运行...");
     }
 }
