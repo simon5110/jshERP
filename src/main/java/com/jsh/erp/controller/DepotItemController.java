@@ -493,14 +493,32 @@ public class DepotItemController {
                 for (DepotItemVo4WithInfoEx diEx : dataList) {
                     JSONObject item = new JSONObject();
                     BigDecimal OutSumRetail = depotItemService.buyOrSale("出库", "零售", diEx.getMId(), monthTime,"number");
+                    if (OutSumRetail ==null){ OutSumRetail=BigDecimal.ZERO;}
+
                     BigDecimal OutSum = depotItemService.buyOrSale("出库", "销售", diEx.getMId(), monthTime,"number");
+                    if (OutSum ==null){ OutSum=BigDecimal.ZERO;}
+
                     BigDecimal InSumRetail = depotItemService.buyOrSale("入库", "零售退货", diEx.getMId(), monthTime,"number");
+                    if (InSumRetail ==null){ InSumRetail=BigDecimal.ZERO;}
+
                     BigDecimal InSum = depotItemService.buyOrSale("入库", "销售退货", diEx.getMId(), monthTime,"number");
+                    if (InSum ==null){ InSum=BigDecimal.ZERO;}
+
                     BigDecimal OutSumRetailPrice = depotItemService.buyOrSale("出库", "零售", diEx.getMId(), monthTime,"price");
+                    if (OutSumRetailPrice ==null){ OutSumRetailPrice=BigDecimal.ZERO;}
+
                     BigDecimal OutSumPrice = depotItemService.buyOrSale("出库", "销售", diEx.getMId(), monthTime,"price");
+                    if (OutSumPrice ==null){ OutSumPrice=BigDecimal.ZERO;}
+
                     BigDecimal InSumRetailPrice = depotItemService.buyOrSale("入库", "零售退货", diEx.getMId(), monthTime,"price");
+                    if (InSumRetailPrice ==null){ InSumRetailPrice=BigDecimal.ZERO;}
+
                     BigDecimal InSumPrice = depotItemService.buyOrSale("入库", "销售退货", diEx.getMId(), monthTime,"price");
+                    if (InSumPrice ==null){ InSumPrice=BigDecimal.ZERO;}
+
                     BigDecimal OutInSumPrice = (OutSumRetailPrice.add(OutSumPrice)).subtract(InSumRetailPrice.add(InSumPrice));
+                    if (OutInSumPrice ==null){ OutInSumPrice=BigDecimal.ZERO;}
+                    
                     item.put("MaterialName", diEx.getMName());
                     item.put("MaterialModel", diEx.getMModel());
                     //扩展信息
