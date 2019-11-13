@@ -67,10 +67,10 @@
                         return str;
                     }
                 },
-                { title: '名称',field: 'supplier',width:150},
-                { title: '联系人', field: 'contacts',width:50,align:"center"},
+                { title: '名称',field: 'supplier',width:200},
+                { title: '联系人', field: 'contacts',width:100,align:"center"},
                 { title: '手机号码', field: 'telephone',width:100,align:"center"},
-                { title: '电子邮箱',field: 'email',width:80,align:"center"},
+                { title: '电子邮箱',field: 'email',width:150,align:"center"},
                 { title: '联系电话', field: 'phonenum',width:100,align:"center"},
                 { title: '传真', field: 'fax',width:100,align:"center"},
                 { title: '预付款',field: 'advancein',width:70,align:"center"},

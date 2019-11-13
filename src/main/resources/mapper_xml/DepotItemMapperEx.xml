@@ -194,7 +194,7 @@
     <select id="buyOrSalePrice" resultType="java.math.BigDecimal">
         select sum(AllPrice) as AllPrice from jsh_depotitem di,jsh_depothead dh
         where di.HeaderId = dh.id
-        and dh.type='${type}' and dh.subType!='${subType}'
+        and dh.type='${type}' and dh.subType='${subType}'
         and di.MaterialId =${MId}
         and dh.OperTime &gt;= '${MonthTime}-01 00:00:00'
         and dh.OperTime &lt;= '${MonthTime}-31 23:59:59'

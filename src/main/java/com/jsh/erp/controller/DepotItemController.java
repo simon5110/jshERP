@@ -245,7 +245,6 @@ public class DepotItemController {
      * 查找所有的明细
      * @param currentPage
      * @param pageSize
-     * @param projectId
      * @param monthTime
      * @param headIds
      * @param materialIds
@@ -311,7 +310,6 @@ public class DepotItemController {
      * 导出excel表格
      * @param currentPage
      * @param pageSize
-     * @param projectId
      * @param monthTime
      * @param headIds
      * @param materialIds
@@ -362,7 +360,7 @@ public class DepotItemController {
 
     /**
      * 统计总计金额
-     * @param pid
+     * @param depotId
      * @param monthTime
      * @param headIds
      * @param materialIds
@@ -432,9 +430,17 @@ public class DepotItemController {
                 for (DepotItemVo4WithInfoEx diEx : dataList) {
                     JSONObject item = new JSONObject();
                     BigDecimal InSum = depotItemService.buyOrSale("入库", "采购", diEx.getMId(), monthTime, "number");
+                    if(InSum==null){InSum=BigDecimal.ZERO;}
+
                     BigDecimal OutSum = depotItemService.buyOrSale("出库", "采购退货", diEx.getMId(), monthTime, "number");
+                    if(OutSum==null){OutSum=BigDecimal.ZERO;}
+
                     BigDecimal InSumPrice = depotItemService.buyOrSale("入库", "采购", diEx.getMId(), monthTime, "price");
+                    if(InSumPrice==null){InSumPrice=BigDecimal.ZERO;}
+
                     BigDecimal OutSumPrice = depotItemService.buyOrSale("出库", "采购退货", diEx.getMId(), monthTime, "price");
+                    if(OutSumPrice==null){OutSumPrice=BigDecimal.ZERO;}
+
                     item.put("MaterialName", diEx.getMName());
                     item.put("MaterialModel", diEx.getMModel());
                     //扩展信息
@@ -638,7 +644,6 @@ public class DepotItemController {
      * @param currentPage
      * @param pageSize
      * @param projectId
-     * @param monthTime
      * @param request
      * @param response
      * @return
