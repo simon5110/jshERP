@@ -452,7 +452,7 @@
 				organNameTitle = "会员卡号";
 			}
 		}
-		var opWidth = 120; //操作宽度
+		var opWidth = 80; //操作宽度
 		var isShowSkip = false; //是否显示跳转按钮
 		var opTitle = ""; //跳转按钮的标题
         if(listTitle == "采购订单列表") {
@@ -502,7 +502,7 @@
 						}
 					}
 				},
-				{ title: '商品信息',field: 'materialsList',width:200,formatter:function(value){
+				{ title: '商品信息',field: 'materialsList',width:250,formatter:function(value){
 						if(value) {
                             return value.replace(",","，");
 						}
