@@ -1,4 +1,4 @@
-FILE_PATH=/home/jshERP2.0
+FILE_PATH=~/jshERP2.0
 SERVER_NAME=jshERP
 readonly APP_HOME=${FILE_PATH:-$(dirname $(cd `dirname $0`; pwd))}
 

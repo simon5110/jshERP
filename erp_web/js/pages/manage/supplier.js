@@ -67,7 +67,7 @@
                         return str;
                     }
                 },
-                { title: '名称',field: 'supplier',width:150},
+                { title: '名称',field: 'supplier',width:200},
                 { title: '联系人', field: 'contacts',width:50,align:"center"},
                 { title: '手机号码', field: 'telephone',width:100,align:"center"},
                 { title: '电子邮箱',field: 'email',width:80,align:"center"},
