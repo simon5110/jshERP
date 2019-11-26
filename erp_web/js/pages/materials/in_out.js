@@ -502,7 +502,7 @@
 						}
 					}
 				},
-				{ title: '商品信息',field: 'materialsList',width:650,formatter:function(value){
+				{ title: '商品信息',field: 'materialsList',width:250,formatter:function(value){
 						if(value) {
                             return value.replace(",","，");
 						}
