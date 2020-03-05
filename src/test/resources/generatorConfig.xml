@@ -14,8 +14,8 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/jsh_erp?generateSimpleParameterMetadata=true"
-                        userId="root" password="123456">
+                        connectionURL="jdbc:mysql://www.enul.cn:3306/weberp?generateSimpleParameterMetadata=true"
+                        userId="root" password="ali@zggc5055">
         </jdbcConnection>
 
         <javaTypeResolver>
@@ -65,5 +65,6 @@
         <table tableName="jsh_orga_user_rel" domainObjectName="OrgaUserRel"></table>
         <table tableName="jsh_tenant" domainObjectName="Tenant"></table>
         <table tableName="jsh_msg" domainObjectName="Msg"></table> -->
+        <table tableName="tb_SysUser" domainObjectName="SysUser"></table>
     </context>
 </generatorConfiguration>
